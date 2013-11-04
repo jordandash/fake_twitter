@@ -1,0 +1,13 @@
+<h1>It's For The Birds!</h1>
+
+<%= form_for @tweet do |f| %>
+	<div>
+		<%= f.text_field :tweet_text %><br>
+		<%= f.submit 'Do a Twitter!' %>
+	</div>
+<% end %>
+
+<% @all_tweets.each do |tweet| %>
+	<p><%= tweet.tweet_text %></p>
+	<p>--------------------------------------------------</p>
+<% end %>
